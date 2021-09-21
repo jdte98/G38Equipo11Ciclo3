@@ -1,0 +1,256 @@
+.fondo{
+  background-color: #C7CFB7;
+  transition: .8s ease all;
+}
+
+.fondo.dark{
+  background-color: #344546;
+}
+
+.estilocontainer{
+  background-color: #F7F7E8;
+  color: #557174;
+   
+  border-radius: 10px;
+  padding: 1.5em;
+  transition: .8s ease all;
+}
+
+.fondo.dark .estilocontainer{
+  background-color: #557174;
+  color: #F7F7E8;
+}
+
+/*--------------Boton iniciar sesión-----------------*/
+/*Estilo normal*/
+.boton1{
+  background-color: #9DAD7F;
+  color: #F7F7E8;
+  transition: .8s ease all;
+}
+.boton1:hover{
+  background-color: #83955F;
+  color: #F7F7E8;
+  transition: 100ms;
+}
+/*Estilo oscuro */
+.fondo.dark .boton1{
+  background-color: #C7CFB7;
+  color: #344546;
+}
+
+.fondo.dark .boton1:hover{
+  background-color: #A9B691;
+  color: #344546;
+  transition: 100ms;
+}
+/*--------------Boton Registrarse-----------------*/
+/*Estilo normal*/
+.enlace{
+  background-color: #557174; 
+  color: #F7F7E8;
+  transition: .8s ease all;
+}
+.enlace:hover{
+  background-color: #455B5E;
+  color: #F7F7E8;
+  transition: 100ms;
+}
+/*Estio oscuro*/
+.fondo.dark .enlace{
+  background-color: #7E9CA0;
+}
+
+.fondo.dark .enlace:hover{
+  background-color: #68898D;
+}
+
+/*--------------Entradas de texto-----------------*/
+/*Estilo normal*/
+.cajatexto{
+  background-color: #F7F7E8;
+  color: #557174;
+  width: 75%;
+}
+
+.cajatexto:focus{
+  background-color: #F7F7E8;
+  color: #557174;
+}
+
+.cajatexto::placeholder{
+  color: #8AA5A8;
+}
+
+/*Estilo oscuro*/
+.fondo.dark .cajatexto{
+  background-color: #557174;
+  color: #F7F7E8;
+}
+
+/*--------------Iconos redes sociales-----------------*/
+/*Estilo nomarl*/
+.iconcolor{
+  color: #557174;
+}
+
+.iconcolor:hover{
+  color: #7E9CA0;
+  transition: 0.1s;
+}
+/*EStilo oscuro*/
+.fondo.dark .iconcolor{
+  color: #D0DBDC;
+}
+
+.fondo.dark .iconcolor:hover{
+  color: #E8EDEE;
+}
+
+/*--------------Logo E11 cabeza de pagina-----------------*/
+/*Estilo normal*/
+.e11{
+  text-decoration: None;
+  color: #557174;
+  transition: .8s ease all;
+}
+
+.e11:hover{
+  text-decoration: None;
+  color: #7E9CA0;
+}
+/*Estilo oscuro*/
+
+.fondo.dark .e11{
+  text-decoration: None;
+  color: #F7F7E8;
+}
+
+.fondo.dark .e11:hover{
+  text-decoration: None;
+  color: #7E9CA0
+}
+
+/*----------Botones para el menu del cabeza de pagina-----------*/
+/*Estilo normal*/
+.boton-menu{
+  text-decoration: None;
+  color:#557174
+}
+
+.boton-menu:hover{
+  text-decoration: None;
+  color: #232E2F;
+}
+
+/*Estilo oscuro*/
+.fondo.dark .boton-menu{
+  color: #D0DBDC;
+}
+
+.fondo.dark .boton-menu:hover{
+  color: #E8EDEE;
+}
+/*---------------Mensaje de alerta incorrecto-------------------*/
+.errormensaje{
+  background-color: #CFB6B6;
+  color: #885959;
+  border-color: #634040;
+}
+
+.errormensaje:hover{
+  background-color: #BF9C9C;
+  transition: .5s;
+}
+/*---------------Mensaje de alerta bien-------------------*/
+.mensaje-bien{
+  background-color: #B6CFC3;
+  color: #61947B;
+  border-color: #517B67;
+}
+
+.mensaje-bien:hover{
+  background-color: #9CBFAE;
+  transition: .5s;
+}
+/*---------------Estilo para la tabla------------------------------------------------*/
+/*Estilo normal*/
+.tabla{
+  background-color: #9DAD7F;
+  color: #F7F7E8;
+  transition: .8s ease all
+}
+
+.tabla tr:hover{
+  background-color: #83955F;
+  transition: 0.5s;
+}
+
+/*Estilo oscuro*/ 
+.fondo.dark .tabla{
+  background-color: #7E9CA0;
+  color: #F7F7E8;
+}
+
+.fondo.dark .tabla tr:hover{
+  background-color: #68898D;
+  transition: 0.5s;
+}
+/*---------------Boton para cambiar al modo oscuro--------------*/
+.darkswitch{
+  background: #344546;
+  border-radius: 100px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+
+.darkswitch span{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #F7F7E8;
+}
+
+.darkswitch::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F7F7E8;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px #557174;
+}
+
+.darkswitch.active{
+  background: #F7F7E8;
+}
+
+.darkswitch.active::after{
+  left: unset;
+  right: 0;
+}
+
+.darkswitch.active{
+  background: #7E9CA0;
+  color: black;
+}
+
+.darkswitch.active::after{
+  right: 0;
+  left: unset;
+}
+
+
+
+
+
