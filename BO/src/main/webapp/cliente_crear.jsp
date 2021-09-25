@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="pagelines-brands.svg">
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width">
-	  <title>E11 - Reportes</title>
+	  <title>E11 - Crear cliente</title>
 
 	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	  crossorigin="anonymous">
@@ -65,48 +65,91 @@
           </div>
         </div>
       </nav>
-    </header>
+    </header>  
 
     <main>
       <div class="container-fluid cont">
         <div class="container estilocontainer" align="center">
-          <div class="row align-items-center">
+          <div class="row align-items-center align-middle">
             <div class="col">
               <i class="fab fa-pagelines fa-3x"></i>
             </div>
             <div class="col">
-              <h1>
-                Reportes
-              </h1>
+              <h1>Crear Cliente</h1>
             </div>
             <div class="col">
-              <a class="flecha-volver" href="pagina_inicio.jsp">
+              <a class="flecha-volver" href="clientes.jsp">
                 <i class="fas fa-arrow-left fa-2x"></i>
               </a>
             </div>
           </div>
           <br>
-          <div class="row justify-content-center">
-            <div class="col-1"></div> <!--Caja vacia para centrar el titulo-->
-            <div class="col-4 align-self-center">
-              <div class="row d-grid">
-                <!--Boton Lista de usuarios-->
-                <a href="" class=""></a>
-                <button class="btn botonnormal" type="button" onclick="window.location.href='lista_usuarios.jsp'">Lista de usuarios</button>
-              </div>
-              <br>
-              <div class="row d-grid">
-                <!--Boton Lista de clientes-->
-                <button class="btn botonnormal" type="button" onclick="window.location.href='lista_clientes.jsp'">Lista de clientes</button>
-              </div>
-              <br>
-              <div class="row d-grid">
-                <!--Boton Ventas por Cliente-->
-                <button class="btn botonnormal" type="button" onclick="window.location.href=''">Ventas por cliente</button>
-              </div>
-            </div>
-            <div class="col-1"></div> <!--Caja vacia para centrar el titulo-->
+          <div class="row">
+            <!--Mensajes de alerta-->
+            <div class="alert errormensaje visually-hidden" role="alert">
+              <span><i class="fas fa-user-times fa-2x"></i></span>
+              El cliente no se ha podido crear</div>
+            <div class="alert mensajebien visually-hidden" role="alert">
+              <span><i class="fas fa-user-check fa-2x"></i></span>
+              El cliente fue creado con exito</div>
           </div>
+          <br>
+          <form action="">
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto Nombre Completo-->
+                <input type="text" class="form-control shadow-sm cajatexto" placeholder="Nombre completo" required>
+              </div>
+              <div class="col-3"></div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto CÃ©dula-->
+                <input type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula" required>
+              </div>
+              <div class="col-3"></div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto Correo Electronico-->
+                <input type="email" class="form-control shadow-sm cajatexto" placeholder="Correo" required>
+              </div>
+              <div class="col-3"></div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto Dirección-->
+                <input type="text" class="form-control shadow-sm cajatexto" placeholder="Dirección" required>
+              </div>
+              <div class="col-3"></div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto Telefono-->
+                <input type="tel" class="form-control shadow-sm cajatexto" placeholder="Teléfono" required>
+              </div>
+              <div class="col-3"></div>
+            </div>
+            <br>
+            <div class="row align-middle">
+              <div class="col"></div>
+              <div class="col-2 d-grid">
+                <button class="btn botonnormal" type="button">
+                  <i class="fas fa-user-plus"></i>
+                </button>
+              </div>
+              <div class="col"></div>
+            </div>
+          </form>  
         </div>
       </div>
     </main>

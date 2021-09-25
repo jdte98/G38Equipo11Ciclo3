@@ -1,11 +1,3 @@
-//---------------------------------Modo oscuro------------------------------
-const btnSwitch = document.querySelector('#switch');
-
-btnSwitch.addEventListener('click', () =>{
-  document.body.classList.toggle('dark');
-  btnSwitch.classList.toggle('active');
-})
-
 //Funcion para comparar el usuario y la contraseña con la base de datos
 function comparar() {
 			//trayendo texto de input de username
@@ -40,7 +32,7 @@ function comparar() {
 							//si la clave coincide
 							if (usuarios[i].password === y) {
 								console.log("si");
-								var element = document.getElementById("error");
+								var element = document.getElementById("errormensaje");
 								element.classList.add("visually-hidden");
 								document.getElementById("inputuser").value = "";
 								document.getElementById("inputpass").value = "";
@@ -49,7 +41,7 @@ function comparar() {
 							} else {
 								//si la clave NO coincide
 								console.log("error clave");
-								var element = document.getElementById("error");
+								var element = document.getElementById("errormensaje");
 								element.classList.remove("visually-hidden");
 								document.getElementById("inputuser").value = "";
 								document.getElementById("inputpass").value = "";
@@ -61,7 +53,7 @@ function comparar() {
 					console.log("no encontrado");
 					
 					//quitando la capacidad de ocultacion del error para mostrarlo
-					var element = document.getElementById("error");
+					var element = document.getElementById("errormensaje");
 					element.classList.remove("visually-hidden");
 					document.getElementById("inputuser").value = "";
 					document.getElementById("inputpass").value = "";

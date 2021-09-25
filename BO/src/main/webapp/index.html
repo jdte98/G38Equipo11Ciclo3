@@ -1,13 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 
   <head>
     <link rel="shortcut icon" href="pagelines-brands.svg">
 	  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width">
-	  <title>E11 - Bienvenido</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>E11</title>
 
 	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	  crossorigin="anonymous">
@@ -25,12 +23,12 @@
 
   </head>
 
-  <body class="fondo m-2">
+  <body class="fondo">
 
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top estilo-head">
         <div class="container-fluid">
-          <a class="navbar-brand" href="pagina_inicio.jsp">
+          <a class="navbar-brand" href="index.html">
             <h1>E11</h1>
           </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">
@@ -39,28 +37,9 @@
               </span>
             </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link"  href="usuarios.jsp">Usuarios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"  href="clientes.jsp">Clientes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"  href="proveedores.jsp">Proveedores</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"  href="productos.jsp">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"  href="ventas.jsp">Ventas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"  href="reportes.jsp">Reportes</a>
-              </li>
-            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
             <div class="d-flex">
-              <button class="btn bt-inicio-sesion" onclick="window.location.href='index.html'">Cerrar sesión</button>
+              <button class="btn bt-inicio-sesion" onclick="window.location.href='login.jsp'">Iniciar sesiÃ³n</button>
             </div>
           </div>
         </div>
@@ -76,26 +55,15 @@
             </div>
             <div class="col">
             <h1>
-              ¡Bienvenido a la Tienda Genérica E11!
+              Â¡Bienvenido a la Tienda GenÃ©rica E11!
             </h1>
-            </div>
-          </div>
-          <br>
-          <div class="row justify-content-center">
-            <div class="col-2"></div>
-            <div class="col-8">
-              <p align="justify">
-                En la parte superior encontrara una barra con diferentes opciones, por el momento solo tenemos habilitada la secciÃ³n de Usuarios, Clientes, Reportes-Lista de Usuarios y Reportes-Lista de Clientes, lo invitamos a ingresar a alguna de estas opciones para comenzar la prueba. <br>
-                ¡Gracias!
-              </p>
             </div>
           </div>
         </div>
       </div>
-    </main>    
-  
-
-    <script src="script.js"></script>
+    </main>
+    
+  <script src="script.js"></script>
   </body>
 	
 </html>
