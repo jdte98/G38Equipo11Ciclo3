@@ -186,7 +186,7 @@ public class UsuarioDAO {
 					+ "SET email_usuario = '"+ user.getEmail_usuario()
 					+"', nombre_usuario = '" + user.getNombre_usuario()
 					+"', password = '"+ user.getPassword()
-					+"', usuario = '"+ user.getEmail_usuario()
+					+"', usuario = '"+ user.getUsuario()
 					+"' WHERE cedula_usuario = "+ user.getCedula_usuario()
 					+";";
 			//Ejecutar la sentencia

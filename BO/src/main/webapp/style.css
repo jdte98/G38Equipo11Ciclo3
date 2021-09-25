@@ -270,6 +270,12 @@
   transition: 0.5s;
 }
 
+/* Estilo para los objetos deshabilitados */
+.form-control[readonly] {
+    background-color: var(--color-oscuro3);
+    opacity: 0.5;
+}
+
 .cont{
   padding: 120px 1px 0;
 }

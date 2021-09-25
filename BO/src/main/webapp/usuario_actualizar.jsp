@@ -87,8 +87,8 @@
             <br>
             <div class="row">
               <!--Mensajes de alerta para Actualizar-->
-              <div class="alert errormensaje visually-hidden" role="alert">No fue posible encontrar el usuario</div>
-              <div class="alert mensaje-bien visually-hidden" role="alert">
+              <div id="mensaje-error-coincidencia-cedula" class="alert errormensaje visually-hidden" role="alert">No fue posible actualizar el usuario, verifique que la cédula sea valida</div>
+              <div id="mensaje-bien-usuario-actualizado" class="alert mensaje-bien visually-hidden" role="alert">
                 <span><i class="fas fa-user-check fa-2x"></i></span>
                 El usuario fue actualizado con éxito</div>
             </div>
@@ -96,8 +96,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto usuario-->
-                <input type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula">
+                <!--Caja texto cedula para consultar coincidencia-->
+                <input id="cedula_usuario" type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula">
               </div>
               <div class="col-3"></div>
             </div>
@@ -105,26 +105,36 @@
             <div class="row align-middle">
               <div class="col"></div>
               <div class="col-2 d-grid">
-                <button class="btn botonnormal" type="button">
+                <button class="btn botonnormal" type="button" onclick="verificarUser()">
                   <i class="fas fa-search"></i>
                 </button>
               </div>
               <div class="col"></div>
             </div>
             <br>
-            <form class="visually-hidden" action="">
+            <!-- Formulario oculto para actualizar los datos si coincide la existencia del usuario ingresado -->
+            <form id="form-actualizar" class="visually-hidden" action="">
               <div class="row align-items-center align-middle">
                 <div class="col"></div>
                 <div class="col">
                   <h4>Datos a actualizar</h4>
                 </div>
                 <div class="col"></div>
+              </div>
+              <div class="row">
+                <div class="col-3"></div>
+                <div class="col">
+                  <!--Caja texto con la Cedula del usuario a editar deshabilitada-->
+                  <input id="cedula_usuariobien" type="text" class="form-control shadow-sm cajatexto" aria-label="readonly input example" readonly>
+                </div>
+                <div class="col-3"></div>
               </div> 
+              <br>
               <div class="row">
                 <div class="col-3"></div>
                 <div class="col">
                   <!--Caja texto Nombre Completo-->
-                  <input type="text" class="form-control shadow-sm cajatexto" placeholder="Nombre completo" required>
+                  <input id="nombre_usuario" type="text" class="form-control shadow-sm cajatexto" placeholder="Nombre completo" required>
                 </div>
                 <div class="col-3"></div>
               </div>
@@ -133,7 +143,7 @@
                 <div class="col-3"></div>
                 <div class="col">
                   <!--Caja texto Correo Electronico-->
-                  <input type="email" class="form-control shadow-sm cajatexto" placeholder="Correo" required>
+                  <input id="email_usuario" type="email" class="form-control shadow-sm cajatexto" placeholder="Correo" required>
                 </div>
                 <div class="col-3"></div>
               </div>
@@ -142,7 +152,7 @@
                 <div class="col-3"></div>
                 <div class="col">
                   <!--Caja texto Usuario-->
-                  <input type="text" class="form-control shadow-sm cajatexto" placeholder="Usuario" required>
+                  <input id="user" type="text" class="form-control shadow-sm cajatexto" placeholder="Usuario" required>
                 </div>
                 <div class="col-3"></div>
               </div>
@@ -151,7 +161,7 @@
                 <div class="col-3"></div>
                 <div class="col">
                   <!--Caja texto Contraseña-->
-                  <input type="password" class="form-control shadow-sm cajatexto" placeholder="Contraseña" required>
+                  <input id="password" type="password" class="form-control shadow-sm cajatexto" placeholder="Contraseña" required>
                 </div>
                 <div class="col-3"></div>
               </div>
@@ -159,7 +169,8 @@
               <div class="row align-middle">
                 <div class="col"></div>
                 <div class="col-2 d-grid">
-                  <button class="btn botonnormal" type="button">
+                  <!-- boton para editar el usuario -->
+                  <button class="btn botonnormal" type="button" onclick="actualizar()">
                     <i class="fas fa-user-edit"></i>
                   </button>
                 </div>
@@ -175,7 +186,7 @@
   
   
   <!--Script para el modo oscuro-->
-  <script src="script.js"></script>
+  <script src="script_usuario_actualizar.js"></script>
   </body>
 	
 </html>
