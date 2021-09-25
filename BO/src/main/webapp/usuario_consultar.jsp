@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="pagelines-brands.svg">
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width">
-	  <title>E11 - Reportes</title>
+	  <title>E11 - Consultar usuarios</title>
 
 	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	  crossorigin="anonymous">
@@ -70,49 +70,49 @@
     <main>
       <div class="container-fluid cont">
         <div class="container estilocontainer" align="center">
-          <div class="row align-items-center">
+          <div class="row align-items-center align-middle">
             <div class="col">
               <i class="fab fa-pagelines fa-3x"></i>
             </div>
             <div class="col">
-              <h1>
-                Reportes
-              </h1>
+              <h1>Consultar Usuario</h1>
             </div>
             <div class="col">
-              <a class="flecha-volver" href="pagina_inicio.jsp">
+              <a class="flecha-volver" href="usuarios.jsp">
                 <i class="fas fa-arrow-left fa-2x"></i>
               </a>
             </div>
           </div>
           <br>
-          <div class="row justify-content-center">
-            <div class="col-1"></div> <!--Caja vacia para centrar el titulo-->
-            <div class="col-4 align-self-center">
-              <div class="row d-grid">
-                <!--Boton Lista de usuarios-->
-                <a href="" class=""></a>
-                <button class="btn botonnormal" type="button" onclick="window.location.href='lista_usuarios.jsp'">Lista de usuarios</button>
-              </div>
-              <br>
-              <div class="row d-grid">
-                <!--Boton Lista de clientes-->
-                <button class="btn botonnormal" type="button" onclick="window.location.href='lista_clientes.jsp'">Lista de clientes</button>
-              </div>
-              <br>
-              <div class="row d-grid">
-                <!--Boton Ventas por Cliente-->
-                <button class="btn botonnormal" type="button" onclick="window.location.href=''">Ventas por cliente</button>
-              </div>
-            </div>
-            <div class="col-1"></div> <!--Caja vacia para centrar el titulo-->
+          <div class="row">
+            <!--Mensajes de alerta para consultar-->
+            <div class="alert errormensaje visually-hidden" role="alert">No fue posible encontrar el usuario</div>
           </div>
+          <br>
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col">
+              <!--Caja texto usuario-->
+              <input type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula">
+            </div>
+            <div class="col-3"></div>
+          </div>
+          <br>
+          <div class="row flex-nowrap align-middle">
+            <div class="col"></div>
+            <div class="col-2 d-grid">
+              <button class="btn botonnormal" type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div class="col"></div>
+          </div>   
         </div>
       </div>
-    </main>
+    </main>  
   
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 	
 </html>

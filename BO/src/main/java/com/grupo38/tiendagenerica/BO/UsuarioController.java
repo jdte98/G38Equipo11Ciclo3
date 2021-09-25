@@ -46,7 +46,7 @@ public class UsuarioController {
 	@PutMapping("/actualizarusuarios")
 	public void actualizarUsuario(UsuarioVO user) {
 		UsuarioDAO Dao = new UsuarioDAO();
-		Dao.resgistrarUsuario(user);
+		Dao.actualizarUsuario(user);
 	}
 	
 }

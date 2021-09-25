@@ -1,85 +1,197 @@
+:root{
+  --color-claro: #F7F9FA;
+  --color-oscuro: #254B62;
+  --color-oscuro3: #547284;
+  --color-oscuro4: #6B8595;
+  --color-fondo: #254B62;
+  --color-caja: #3C5E73;
+  --color-cajatexto: #547284;
+  --color-texto: #F7F9FA;
+  --color-textohover: #C8D2D8;
+  --color-texto-cajatexto: #B1BFC7;
+  --color-medio: #8298A6;
+  --color-botonnormal: #547284;
+  --color-botonnormalhover: #6B8595;
+  --color-icono: #9AACB6;
+  --color-iconohover: #E0E6E9;
+}
+
+/*
+:root{
+  --color-claro: #F8F7F8;
+  --color-oscuro: #2D132C;
+  --color-oscuro3: #5A4659;
+  --color-oscuro4: #715F70;
+  --color-fondo: #2D132C;
+  --color-caja: #442C43;
+  --color-cajatexto: #442C43;
+  --color-texto: #F8F7F8;
+  --color-textohover: #CBC4CB;
+  --color-texto-cajatexto: #E1DEE1;
+  --color-botonnormal: #5A4659;
+  --color-botonnormalhover: #715F70;
+  --color-icono: #B4ABB4;
+  --color-iconohover: #F8F7F8;
+}
+:root{
+  --color-claro: #30475E;
+  --color-oscuro: #F8F9F9;
+  --color-oscuro3: #CCD1D7;
+  --color-oscuro4: #B5BEC5;
+  --color-fondo: #F8F9F9;
+  --color-caja: #E2E5E8;
+  --color-cajatexto: #CCD1D7;
+  --color-texto: #30475E;
+  --color-textohover: #5C6F80;
+  --color-texto-cajatexto: #465B6F;
+  --color-botonnormal: #CCD1D7;
+  --color-botonnormalhover: #B5BEC5;
+  --color-icono: #738292;
+  --color-iconohover: #30475E;
+}
+
+:root{
+  --color-claro: #F8F8F9;
+  --color-oscuro: #293B5F;
+  --color-oscuro3: #576581;
+  --color-oscuro4: #6E7A92;
+  --color-fondo: #293B5F;
+  --color-caja: #405070;
+  --color-cajatexto: #576581;
+  --color-texto: #F8F8F9;
+  --color-textohover: #E1E3E8;
+  --color-texto-cajatexto: #E1E3E8;
+  --color-botonnormal: #576581;
+  --color-botonnormalhover: #6E7A92;
+  --color-icono: #CACED7;
+  --color-iconohover: #F8F8F9;
+}
+
+:root{
+  --color-claro: #F7F8F8;
+  --color-oscuro: #152D35;
+  --color-oscuro3: #475A60;
+  --color-oscuro4: #607176;
+  --color-fondo: #152D35;
+  --color-caja: #2E444B;
+  --color-cajatexto: #475A60;
+  --color-texto: #F7F8F8;
+  --color-textohover: #DEE1E2;
+  --color-texto-cajatexto: #DEE1E2;
+  --color-botonnormal: #475A60;
+  --color-botonnormalhover: #607176;
+  --color-icono: #C5CBCD;
+  --color-iconohover: #F7F8F8;
+}
+
+
+:root{
+  --color-claro: #F7F9F8;
+  --color-oscuro: #0F4640;
+  --color-oscuro3: #436E69;
+  --color-oscuro4: #5C827D;
+  --color-fondo: #0F4640;
+  --color-caja: #295A54;
+  --color-cajatexto: #436E69;
+  --color-texto: #F7F9F8;
+  --color-textohover: #DDE5E4;
+  --color-texto-cajatexto: #DDE5E4;
+  --color-botonnormal: #436E69;
+  --color-botonnormalhover: #5C827D;
+  --color-icono: #C3D1CF;
+  --color-iconohover: #F7F9F8;
+}*/
+
+/*------------Estilo para el fondo--------------*/
 .fondo{
-  background-color: #C7CFB7;
-  transition: .8s ease all;
+  background-color: var(--color-fondo);
 }
 
-.fondo.dark{
-  background-color: #344546;
-}
-
+/*------------Estilo para el contenedor--------------*/
 .estilocontainer{
-  background-color: #F7F7E8;
-  color: #557174;
-   
+  background-color: var(--color-caja);
+  color: var(--color-texto);   
   border-radius: 10px;
   padding: 1.5em;
   transition: .8s ease all;
 }
 
-.fondo.dark .estilocontainer{
-  background-color: #557174;
-  color: #F7F7E8;
+/*------------Estilo para la cabeza de pagina--------------*/
+.estilo-head{
+  background-color: var(--color-caja); 
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  border-bottom-color: var(--color-oscuro4)
 }
 
-/*--------------Boton iniciar sesión-----------------*/
-/*Estilo normal*/
+.estilo-head li a{
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+.estilo-head li a:hover{
+  color: var(--color-textohover);
+  transition: 0.5s;
+}
+
+/*Estilo para el boton iniciar sesión*/
+.bt-inicio-sesion{
+  border-style: solid;
+  border-color: var(--color-claro);
+  color: var(--color-claro);
+}
+.bt-inicio-sesion:hover{
+  background-color: var(--color-claro);
+  color: var(--color-oscuro)
+}
+/*--------------Boton iniciar sesión en la caja-----------------*/
+
 .boton1{
-  background-color: #9DAD7F;
-  color: #F7F7E8;
+  color: var(--color-texto);
   transition: .8s ease all;
 }
 .boton1:hover{
-  background-color: #83955F;
-  color: #F7F7E8;
-  transition: 100ms;
+  background-color: var(--color-botonnormal);
+  color: var(--color-texto);
+  transition: 0.5s;
 }
-/*Estilo oscuro */
-.fondo.dark .boton1{
-  background-color: #C7CFB7;
-  color: #344546;
-}
+/*--------------Botones normales-----------------*/
 
-.fondo.dark .boton1:hover{
-  background-color: #A9B691;
-  color: #344546;
-  transition: 100ms;
-}
-/*--------------Boton Registrarse-----------------*/
-/*Estilo normal*/
-.enlace{
-  background-color: #557174; 
-  color: #F7F7E8;
+.botonnormal{
+  background-color: var(--color-botonnormal); 
+  color: var(--color-claro);
   transition: .8s ease all;
 }
-.enlace:hover{
-  background-color: #455B5E;
-  color: #F7F7E8;
+.botonnormal:hover{
+  background-color: var(--color-botonnormalhover);
+  color: var(--color-claro);
   transition: 100ms;
 }
-/*Estio oscuro*/
-.fondo.dark .enlace{
-  background-color: #7E9CA0;
-}
 
-.fondo.dark .enlace:hover{
-  background-color: #68898D;
+/*icono volver a pagina anterior*/
+
+.flecha-volver{
+  color: var(--color-icono);
+}
+.flecha-volver:hover{
+  color: var(--color-iconohover)
 }
 
 /*--------------Entradas de texto-----------------*/
 /*Estilo normal*/
 .cajatexto{
-  background-color: #F7F7E8;
-  color: #557174;
+  background-color: var(--color-cajatexto);
+  color: var(--color-texto);
   width: 75%;
 }
 
 .cajatexto:focus{
-  background-color: #F7F7E8;
-  color: #557174;
+  background-color: var(--color-cajatexto);
+  color: var(--color-texto);
 }
 
 .cajatexto::placeholder{
-  color: #8AA5A8;
+  color: var(--color-texto-cajatexto);
 }
 
 /*Estilo oscuro*/
@@ -88,68 +200,40 @@
   color: #F7F7E8;
 }
 
-/*--------------Iconos redes sociales-----------------*/
+/*--------------Iconos redes-----------------*/
 /*Estilo nomarl*/
 .iconcolor{
-  color: #557174;
+  color: var(--color-icono);
 }
 
 .iconcolor:hover{
-  color: #7E9CA0;
+  color: var(--color-iconohover);
   transition: 0.1s;
-}
-/*EStilo oscuro*/
-.fondo.dark .iconcolor{
-  color: #D0DBDC;
-}
-
-.fondo.dark .iconcolor:hover{
-  color: #E8EDEE;
 }
 
 /*--------------Logo E11 cabeza de pagina-----------------*/
 /*Estilo normal*/
 .e11{
   text-decoration: None;
-  color: #557174;
+  color: var(--color-texto);
   transition: .8s ease all;
 }
 
 .e11:hover{
   text-decoration: None;
-  color: #7E9CA0;
-}
-/*Estilo oscuro*/
-
-.fondo.dark .e11{
-  text-decoration: None;
-  color: #F7F7E8;
-}
-
-.fondo.dark .e11:hover{
-  text-decoration: None;
-  color: #7E9CA0
+  color: var(--color-textohover);
 }
 
 /*----------Botones para el menu del cabeza de pagina-----------*/
 /*Estilo normal*/
 .boton-menu{
   text-decoration: None;
-  color:#557174
+  color: var(--color-texto)
 }
 
 .boton-menu:hover{
   text-decoration: None;
-  color: #232E2F;
-}
-
-/*Estilo oscuro*/
-.fondo.dark .boton-menu{
-  color: #D0DBDC;
-}
-
-.fondo.dark .boton-menu:hover{
-  color: #E8EDEE;
+  color: var(--color-textohover);
 }
 /*---------------Mensaje de alerta incorrecto-------------------*/
 .errormensaje{
@@ -176,81 +260,16 @@
 /*---------------Estilo para la tabla------------------------------------------------*/
 /*Estilo normal*/
 .tabla{
-  background-color: #9DAD7F;
-  color: #F7F7E8;
+  background-color: var(--color-oscuro3);
+  color: var(--color-texto);
   transition: .8s ease all
 }
 
 .tabla tr:hover{
-  background-color: #83955F;
+  background-color: var(--color-oscuro4);
   transition: 0.5s;
 }
 
-/*Estilo oscuro*/ 
-.fondo.dark .tabla{
-  background-color: #7E9CA0;
-  color: #F7F7E8;
+.cont{
+  padding: 120px 1px 0;
 }
-
-.fondo.dark .tabla tr:hover{
-  background-color: #68898D;
-  transition: 0.5s;
-}
-/*---------------Boton para cambiar al modo oscuro--------------*/
-.darkswitch{
-  background: #344546;
-  border-radius: 100px;
-  border: none;
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  outline: none;
-}
-
-.darkswitch span{
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  display: block;
-  background: none;
-  color: #F7F7E8;
-}
-
-.darkswitch::after{
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  background: #F7F7E8;
-  top: 0;
-  left: 0;
-  right: unset;
-  border-radius: 100px;
-  transition: .3s ease all;
-  box-shadow: 0px 0px 2px 2px #557174;
-}
-
-.darkswitch.active{
-  background: #F7F7E8;
-}
-
-.darkswitch.active::after{
-  left: unset;
-  right: 0;
-}
-
-.darkswitch.active{
-  background: #7E9CA0;
-  color: black;
-}
-
-.darkswitch.active::after{
-  right: 0;
-  left: unset;
-}
-
-
-
-
-

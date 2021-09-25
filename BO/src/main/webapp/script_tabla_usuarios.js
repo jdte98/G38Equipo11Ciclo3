@@ -1,11 +1,3 @@
-//---------------------------------Modo oscuro------------------------------
-const btnSwitch = document.querySelector('#switch');
-
-btnSwitch.addEventListener('click', () =>{
-  document.body.classList.toggle('dark');
-  btnSwitch.classList.toggle('active');
-})
-
 //---------------------------------Función para consultar la lista de usuarios------------------------------
 var baseurl = "http://localhost:8080/listarusuarios";
 function loadusuarios() {

@@ -66,7 +66,7 @@ public class UsuarioDAO {
 			//Crear un obejeto basado en la clase entidad con los datos encontrados
 			if (res.next()) {
 				UsuarioVO Usuario = new UsuarioVO();
-				Usuario.setCedula_usuario(Integer.parseInt("cedula_usuario"));
+				Usuario.setCedula_usuario(Integer.parseInt(res.getString("cedula_usuario")));
 				Usuario.setEmail_usuario(res.getString("email_usuario"));
 				Usuario.setNombre_usuario(res.getString("nombre_usuario"));
 				Usuario.setPassword(res.getString("password"));
@@ -90,6 +90,7 @@ public class UsuarioDAO {
 			System.out.println("No fue posible ingresar el usuario");
 			System.out.println(e.getMessage());
 			System.out.println(e.getLocalizedMessage());
+			e.printStackTrace();
 		}
 		return listausuarios;
 	}
