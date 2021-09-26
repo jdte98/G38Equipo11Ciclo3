@@ -13,8 +13,8 @@ create table usuarios(
     usuario varchar(255) not null
 );
  #Comandos para que el correo y el usuario nunca se repitan
-create unique index email_usuario on usuarios(cedula);
-create unique index usuario on usuarios(cedula);
+create unique index email_usuario on usuarios(cedula_usuario);
+create unique index usuario on usuarios(cedula_usuario);
 
 #Comandos para ingresar datos a la tabla
 insert into usuarios values (001,'name1@gmail.com','Name 1','admin123456','admininicial');
@@ -25,12 +25,12 @@ insert into usuarios values (003,'name3@gmail.com','Name 3','pass1','user1');
 select * from usuarios;
 
 #----------------------------------Crear tabla de clientes------------------------------
-create table clientes(
+create table if not exists clientes(
 	cedula_cliente bigint primary key,
     direccion_cliente varchar(255),
-    email_cliente varchar(255),
+    email_cliente varchar(255) UNIQUE,
     nombre_cliente varchar(255),
-    telefono_cliente varchar(255)
+    telefono_cliente varchar(255) UNIQUE
 );
 
 create unique index email_cliente on clientes(cedula);
