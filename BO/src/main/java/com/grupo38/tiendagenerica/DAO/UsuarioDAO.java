@@ -51,16 +51,16 @@ public class UsuarioDAO {
 		
 	}
 
-	public ArrayList<UsuarioVO> consultarUsuario(String usuario){
+	public ArrayList<UsuarioVO> consultarUsuario(Integer cedula_usuario){
 		//Lista que contendra el o los usuarios
 		ArrayList<UsuarioVO> listausuarios = new ArrayList<UsuarioVO>();
 		//Conexion
 		Conexion conex = new Conexion();
 		try {
 			//Sentencia para la base de datos
-			PreparedStatement consulta = conex.getConnection().prepareStatement("SELECT * FROM usuarios WHERE usuario = ?");
+			PreparedStatement consulta = conex.getConnection().prepareStatement("SELECT * FROM usuarios WHERE cedula_usuario = ?");
 			//Cambiamos el comodin ? por el dato que llega en el parametro
-			consulta.setString(1, usuario);
+			consulta.setInt(1, cedula_usuario);
 			//Ejecuta la sentencia
 			ResultSet res = consulta.executeQuery();
 			//Crear un obejeto basado en la clase entidad con los datos encontrados

@@ -86,14 +86,16 @@
           <br>
           <div class="row">
             <!--Mensajes de alerta para consultar-->
-            <div class="alert errormensaje visually-hidden" role="alert">No fue posible encontrar el usuario</div>
+            <div id="mensaje-error-eliminado" class="alert errormensaje visually-hidden" role="alert">El usuario no fue eliminado</div>
+            <div id="mensaje-usuario-no-encontrado" class="alert errormensaje visually-hidden" role="alert">Verifique que la cédula sea la correcta</div>
+            <div id="mensaje-bien-eliminado" class="alert mensaje-bien visually-hidden" role="alert">El usuario fue eliminado con éxito</div>
           </div>
           <br>
           <div class="row">
             <div class="col-3"></div>
             <div class="col">
               <!--Caja texto usuario-->
-              <input type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula">
+              <input id="cedula_usuario" type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula">
             </div>
             <div class="col-3"></div>
           </div>
@@ -101,7 +103,7 @@
           <div class="row align-middle">
             <div class="col"></div>
             <div class="col-2 d-grid">
-              <button class="btn botonnormal" type="button">
+              <button class="btn botonnormal" type="button" onclick="borrar()">
                 <i class="fas fa-trash-alt"></i>
               </button>
             </div>
@@ -112,7 +114,7 @@
     </main>  
   
 
-  <script src="script.js"></script>
+  <script src="script_usuario_borrar.js"></script>
   </body>
 	
 </html>
