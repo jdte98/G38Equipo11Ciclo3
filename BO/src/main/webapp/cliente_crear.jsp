@@ -86,10 +86,10 @@
           <br>
           <div class="row">
             <!--Mensajes de alerta-->
-            <div class="alert errormensaje visually-hidden" role="alert">
+            <div id="errorcrearcliente" class="alert errormensaje visually-hidden" role="alert">
               <span><i class="fas fa-user-times fa-2x"></i></span>
               El cliente no se ha podido crear</div>
-            <div class="alert mensajebien visually-hidden" role="alert">
+            <div id="correctocrearcliente" class="alert mensaje-bien visually-hidden" role="alert">
               <span><i class="fas fa-user-check fa-2x"></i></span>
               El cliente fue creado con exito</div>
           </div>
@@ -99,7 +99,7 @@
               <div class="col-3"></div>
               <div class="col">
                 <!--Caja texto Nombre Completo-->
-                <input type="text" class="form-control shadow-sm cajatexto" placeholder="Nombre completo" required>
+                <input id="nombre_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Nombre completo" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -108,7 +108,7 @@
               <div class="col-3"></div>
               <div class="col">
                 <!--Caja texto CÃ©dula-->
-                <input type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula" required>
+                <input id="cedula_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -117,7 +117,7 @@
               <div class="col-3"></div>
               <div class="col">
                 <!--Caja texto Correo Electronico-->
-                <input type="email" class="form-control shadow-sm cajatexto" placeholder="Correo" required>
+                <input id="email_cliente" type="email" class="form-control shadow-sm cajatexto" placeholder="Correo" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -126,7 +126,7 @@
               <div class="col-3"></div>
               <div class="col">
                 <!--Caja texto Dirección-->
-                <input type="text" class="form-control shadow-sm cajatexto" placeholder="Dirección" required>
+                <input id="direccion_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Dirección" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -135,7 +135,7 @@
               <div class="col-3"></div>
               <div class="col">
                 <!--Caja texto Telefono-->
-                <input type="tel" class="form-control shadow-sm cajatexto" placeholder="Teléfono" required>
+                <input id="telefono_cliente" type="tel" class="form-control shadow-sm cajatexto" placeholder="Teléfono" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -143,7 +143,7 @@
             <div class="row align-middle">
               <div class="col"></div>
               <div class="col-2 d-grid">
-                <button class="btn botonnormal" type="button">
+                <button class="btn botonnormal" type="button" onclick="crear()">
                   <i class="fas fa-user-plus"></i>
                 </button>
               </div>
@@ -155,7 +155,7 @@
     </main>
   
 
-  <script src="script.js"></script>
+  <script src="script_cliente_crear.js"></script>
   </body>
 	
 </html>
