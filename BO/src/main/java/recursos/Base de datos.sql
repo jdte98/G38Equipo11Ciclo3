@@ -25,8 +25,10 @@ insert into usuarios values (003,'name3@gmail.com','Name 3','pass1','user1');
 select * from usuarios;
 
 #----------------------------------Crear tabla de clientes------------------------------
+#Comando para eliminar la tabla clientes si llega a existir con el mismo nombre
 DROP TABLE IF EXISTS CLIENTES;
 
+#Crear la tabla
 create table if not exists clientes(
 	cedula_cliente bigint primary key,
     direccion_cliente varchar(255),
@@ -35,9 +37,11 @@ create table if not exists clientes(
     telefono_cliente varchar(255) NOT NULL
 );
 
+ #Insertar datos en la tabla
 insert into clientes values (001,'street1','client1@mail.com','cliente 1','7000001');
 insert into clientes values (002,'street2','client2@mail.com','cliente 2','7000002');
 insert into clientes values (003,'street3','client3@mail.com','cliente 3','7000003');
 
+#Mostrar la tabla
 select * from clientes;
 
