@@ -86,14 +86,14 @@
           <br>
           <div class="row">
             <!--Mensajes de alerta para consultar-->
-            <div class="alert errormensaje visually-hidden" role="alert">No fue posible encontrar el cliente</div>
+            <div id="mensaje-error-consultar-cliente" class="alert errormensaje visually-hidden" role="alert">No fue posible encontrar el cliente</div>
           </div>
           <br>
           <div class="row">
             <div class="col-3"></div>
             <div class="col">
               <!--Caja texto usuario-->
-              <input type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula">
+              <input id="cedula_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula">
             </div>
             <div class="col-3"></div>
           </div>
@@ -101,7 +101,7 @@
           <div class="row align-middle">
             <div class="col"></div>
             <div class="col-2 d-grid">
-              <button class="btn botonnormal" type="button">
+              <button class="btn botonnormal" type="button" onclick="consultar()">
                 <i class="fas fa-search"></i>
               </button>
             </div>
@@ -112,7 +112,7 @@
     </main>
 
 
-  <script src="script.js"></script>
+  <script src="script_cliente_consultar.js"></script>
   </body>
 	
 </html>
