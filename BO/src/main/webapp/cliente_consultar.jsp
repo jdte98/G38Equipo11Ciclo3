@@ -106,7 +106,61 @@
               </button>
             </div>
             <div class="col"></div>
-          </div>   
+          </div>
+          <br>
+          <form id="form-info" class="visually-hidden" action="">
+            <div class="row align-items-center align-middle">
+              <div class="col"></div>
+              <div class="col">
+                <h4>Datos del Cliente</h4>
+              </div>
+              <div class="col"></div>
+            </div>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto con la Cedula del usuario deshabilitada-->
+                <input id="cedula_clienteinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
+              </div>
+              <div class="col-3"></div>
+            </div> 
+            <br>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto Nombre Completo deshabilitada-->
+                <input id="nombre_clienteinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
+              </div>
+              <div class="col-3"></div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto Correo Electronico deshabilitada-->
+                <input id="email_clienteinfo" type="email" class="form-control shadow-sm cajatexto" readonly>
+              </div>
+              <div class="col-3"></div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto Usuario deshabilitada-->
+                <input id="telefono_clienteinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
+              </div>
+              <div class="col-3"></div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto Contraseña deshabilitada-->
+                <input id="direccion_clienteinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
+              </div>
+              <div class="col-3"></div>
+            </div> 
+          </form>   
         </div>
       </div>
     </main>

@@ -95,8 +95,8 @@
           <div class="row">
             <div class="col-3"></div>
             <div class="col">
-              <!--Caja texto cÃ©dula cliente-->
-              <input type="text" id="cedula_cliente" class="form-control shadow-sm cajatexto" placeholder="Cédula">
+              <!--Caja texto cedula cliente-->
+              <input id="cedula_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula">
             </div>
             <div class="col-3"></div>
           </div>
@@ -119,11 +119,21 @@
               </div>
               <div class="col"></div>
             </div> 
+            <br>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto con la Cedula del usuario a editar deshabilitada-->
+                <input id="cedula_clientebien" type="text" class="form-control shadow-sm cajatexto" aria-label="readonly input example" readonly>
+              </div>
+              <div class="col-3"></div>
+            </div>
+            <br>
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
                 <!--Caja texto Nombre Completo-->
-                <input type="text" class="form-control shadow-sm cajatexto" placeholder="Nombre completo" required>
+                <input id="nombre_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Nombre completo" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -132,7 +142,7 @@
               <div class="col-3"></div>
               <div class="col">
                 <!--Caja texto Correo Electronico cliente-->
-                <input type="email" id="email_cliente" class="form-control shadow-sm cajatexto" placeholder="Correo" required>
+                <input id="email_cliente" type="email" class="form-control shadow-sm cajatexto" placeholder="Correo" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -140,8 +150,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto direcciÃ³n cliente-->
-                <input type="text"  id="direccion_cliente" class="form-control shadow-sm cajatexto" placeholder="Dirección" required>
+                <!--Caja texto dirección cliente-->
+                <input id="direccion_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Dirección" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -149,8 +159,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto telÃ©fono cliente-->
-                <input type="text"  id="telefono_cliente" class="form-control shadow-sm cajatexto" placeholder="Teléfono" required>
+                <!--Caja texto telefono cliente-->
+                <input id="telefono_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Teléfono" required>
               </div>
               <div class="col-3"></div>
             </div>

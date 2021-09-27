@@ -32,6 +32,8 @@ function verificarUser(){
 		element3.classList.add("visually-hidden")
 		//agregar el numero de cedula en una caja de texto que no se puede editar
 		document.getElementById("cedula_usuariobien").value = document.getElementById("cedula_usuario").value;
+		//Vaciar la caja de cedula 
+		document.getElementById("cedula_usuario").value = "";
 		
 	} else {
 		//Visualizar el mensaje de error al buscar el usuario
