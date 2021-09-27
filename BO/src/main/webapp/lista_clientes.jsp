@@ -87,7 +87,7 @@
           </div>
           <br>
           <div class="row">
-            <div class="col align-self-center" id="clientes-info">
+            <div class="col align-self-center" id="clientesinfo">
               <!-- Espacio de la tabla de clientes -->
               
             </div>
@@ -97,7 +97,7 @@
     </main>
   
 
-  <script src="script.js"></script>
+  <script src="script_tabla_clientes.js"></script>
   </body>
 	
 </html>
