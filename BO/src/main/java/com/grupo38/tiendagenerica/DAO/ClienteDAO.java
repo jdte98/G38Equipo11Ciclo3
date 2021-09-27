@@ -62,7 +62,7 @@ public class ClienteDAO {
 				Cliente.setDireccion_cliente(res.getString("direccion_cliente"));
 				Cliente.setemail_cliente(res.getString("email_cliente"));
 				Cliente.setnombre_cliente(res.getString("nombre_cliente"));
-				Cliente.setTelefono_cliente(Integer.parseInt(res.getString("telefono_cliente")));
+				Cliente.setTelefono_cliente(res.getString("telefono_cliente"));
 				
 				listaclientes.add(Cliente);
 				
@@ -101,7 +101,7 @@ public class ClienteDAO {
 				Cliente.setDireccion_cliente(res.getString("direccion_cliente"));
 				Cliente.setemail_cliente(res.getString("email_cliente"));
 				Cliente.setnombre_cliente(res.getString("nombre_cliente"));
-				Cliente.setTelefono_cliente(Integer.parseInt(res.getString("telefono_cliente")));
+				Cliente.setTelefono_cliente(res.getString("telefono_cliente"));
 				
 				listaclientes.add(Cliente);
 			}
@@ -163,8 +163,8 @@ public class ClienteDAO {
 					+ "SET direccion_cliente = '"+ client.getDireccion_cliente()
 					+"', email_cliente = '" + client.getemail_cliente()
 					+"', nombre_cliente = '" + client.getnombre_cliente()
-					+"', telefono_cliente = "+ client.getTelefono_cliente()
-					+" WHERE cedula_cliente = "+ client.getcedula_cliente()
+					+"', telefono_cliente = '"+ client.getTelefono_cliente()
+					+"' WHERE cedula_cliente = "+ client.getcedula_cliente()
 					+";";
 			estatuto.executeUpdate(sentencia);
 			System.out.println("Registrado " + sentencia);

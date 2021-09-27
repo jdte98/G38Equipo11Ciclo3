@@ -25,12 +25,14 @@ insert into usuarios values (003,'name3@gmail.com','Name 3','pass1','user1');
 select * from usuarios;
 
 #----------------------------------Crear tabla de clientes------------------------------
+DROP TABLE IF EXISTS CLIENTES;
+
 create table if not exists clientes(
 	cedula_cliente bigint primary key,
     direccion_cliente varchar(255),
-    email_cliente varchar(255) UNIQUE,
-    nombre_cliente varchar(255),
-    telefono_cliente varchar(255) UNIQUE
+    email_cliente varchar(255) UNIQUE NOT NULL,
+    nombre_cliente varchar(255) NOT NULL,
+    telefono_cliente varchar(255) NOT NULL
 );
 
 insert into clientes values (001,'street1','client1@mail.com','cliente 1','7000001');

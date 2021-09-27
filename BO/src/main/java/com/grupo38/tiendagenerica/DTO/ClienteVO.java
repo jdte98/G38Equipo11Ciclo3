@@ -9,7 +9,7 @@ public class ClienteVO implements Serializable{
 	private Integer cedula_cliente;
 	private String email_cliente;
 	private String nombre_cliente;
-	private Integer telefono_cliente;
+	private String telefono_cliente;
 	private String direccion_cliente;
 	
 	
@@ -31,10 +31,10 @@ public class ClienteVO implements Serializable{
 	public void setnombre_cliente(String nombre_cliente) {
 		this.nombre_cliente = nombre_cliente;
 	}
-	public Integer getTelefono_cliente() {
+	public String getTelefono_cliente() {
 		return telefono_cliente;
 	}
-	public void setTelefono_cliente(Integer telefono_cliente) {
+	public void setTelefono_cliente(String telefono_cliente) {
 		this.telefono_cliente = telefono_cliente;
 	}
 	public String getDireccion_cliente() {

@@ -31,7 +31,7 @@ public class ClienteController {
 		return Dao.consultarCliente(cedula_cliente);
 	}
 	
-	@GetMapping("/listarcliente")
+	@GetMapping("/listarclientes")
 	public ArrayList<ClienteVO> listaDeClientes(){
 		ClienteDAO Dao = new ClienteDAO();
 		return Dao.listaDeClientes();
