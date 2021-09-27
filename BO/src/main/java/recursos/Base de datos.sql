@@ -33,9 +33,6 @@ create table if not exists clientes(
     telefono_cliente varchar(255) UNIQUE
 );
 
-create unique index email_cliente on clientes(cedula);
-create unique index telefono_cliente on clientes(cedula);
-
 insert into clientes values (001,'street1','client1@mail.com','cliente 1','7000001');
 insert into clientes values (002,'street2','client2@mail.com','cliente 2','7000002');
 insert into clientes values (003,'street3','client3@mail.com','cliente 3','7000003');
