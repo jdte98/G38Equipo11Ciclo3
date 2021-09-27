@@ -31,7 +31,9 @@ function verificarClientes(){
 		var element3 = document.getElementById("mensaje-error-coincidencia-cedula");
 		element3.classList.add("visually-hidden")
 		//agregar el numero de cedula en una caja de texto que no se puede editar
-		document.getElementById("cedula_cliente").value = document.getElementById("cedula_cliente").value;
+		document.getElementById("cedula_clientebien").value = document.getElementById("cedula_cliente").value;
+		//vaciar la caja de texto de cedula
+		document.getElementById("cedula_cliente").value = "";
 		
 	} else {
 		//Visualizar el mensaje de error al buscar el cliente
@@ -48,7 +50,7 @@ function verificarClientes(){
 //Boton para actualizar el cliente
 function actualizar() {
 	var formData = new FormData();
-	formData.append("cedula_cliente", document.getElementById("cedula_cliente").value);
+	formData.append("cedula_cliente", document.getElementById("cedula_clientebien").value);
 	formData.append("nombre_cliente", document.getElementById("nombre_cliente").value);
 	formData.append("email_cliente", document.getElementById("email_cliente").value);	
 	formData.append("telefono_cliente", document.getElementById("telefono_cliente").value);
@@ -64,14 +66,11 @@ function actualizar() {
 	document.getElementById("cedula_cliente").value = "";
 	
 	//volvemos vacias las cajas de texto del formulario
-	document.getElementById("cedula_cliente").value = "";
+	document.getElementById("cedula_clientebien").value = "";
 	document.getElementById("nombre_cliente").value = "";
 	document.getElementById("email_cliente").value = "";
 	document.getElementById("telefono_cliente").value = "";
 	document.getElementById("direccion_cliente").value = "";
 	
-	xhr.send(formData);
-	
-}/**
- * 
- */
+	xhr.send(formData);	
+}

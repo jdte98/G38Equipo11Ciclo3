@@ -14,11 +14,11 @@ function consultar() {
 	
 	if (cliente.toString() != "") {
 		//Se agrega la información en cada una de las cajas de texto
-		document.getElementById("cedula_cliente").value = cliente[0].cedula_cliente;
-		document.getElementById("nombre_cliente").value = cliente[0].nombre_cliente;
-		document.getElementById("email_cliente").value = cliente[0].email_cliente;
-		document.getElementById("telefono_cliente").value = cliente[0].telefono_cliente;
-		document.getElementById("direccion_cliente").value = cliente[0].direccion_cliente;
+		document.getElementById("cedula_clienteinfo").value = cliente[0].cedula_cliente;
+		document.getElementById("nombre_clienteinfo").value = cliente[0].nombre_cliente;
+		document.getElementById("email_clienteinfo").value = cliente[0].email_cliente;
+		document.getElementById("telefono_clienteinfo").value = cliente[0].telefono_cliente;
+		document.getElementById("direccion_clienteinfo").value = cliente[0].direccion_cliente;
 		
 		//Se vacia la caja de texto para escribir la cedula de nuevo
 		document.getElementById("cedula_cliente").value = "";
@@ -45,6 +45,4 @@ function consultar() {
 		document.getElementById("direccion_cliente").value = "";
 	}
 	
-}/**
- * 
- */
+}
