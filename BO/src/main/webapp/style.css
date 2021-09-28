@@ -107,31 +107,6 @@
   background-color: var(--color-fondo);
 }
 
-/*--------- Estilo para el scroll ------------*/
-/*Tamaño del scroll*/
-.fondo::-webkit-scrollbar{
-  width: 10px;
-}
-/*Estilo de la barra scroll*/
-.fondo::-webkit-scrollbar-thumb{
-  background: var(--color-oscuro3);
-  border-radius: 5px;
-}
-/*Estilo para cuando se le da click a la barra scroll*/
-.fondo::-webkit-scrollbar-thumb:active{
-  background-color: var(--color-oscuro4);
-}
-
-.fondo::-webkit-scrollbar-thumb:hover{
-  background: var(--color-medio);
-  box-shadow: 0 0 2px 1px var(--color-oscuro);
-}
-
-.fondo::-webkit-scrollbar-track {
-  background: var(--color-caja);
-  border-radius: 5px;
-}
-
 /*------------Estilo para el contenedor--------------*/
 .estilocontainer{
   background-color: var(--color-caja);
