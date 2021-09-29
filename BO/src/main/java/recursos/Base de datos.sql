@@ -53,5 +53,6 @@ create table if not exists proveedores(
 insert into proveedores values (001,'ciudad1','calle1','prov 1','7000001');
 insert into proveedores values (002,'ciudad2','calle2','prov 2','7000002');
 insert into proveedores values (003,'ciudad3','calle3','prov 3','7000003');
+insert into proveedores values (004,'ciudad4','calle4','prov 4','7000004');
 
 select * from proveedores;
