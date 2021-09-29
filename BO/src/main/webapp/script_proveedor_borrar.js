@@ -32,7 +32,7 @@ function borrar() {
 					var nit = document.getElementById("nit_proveedor").value;
 					//Eliminamos el proveedor
 					var xhr = new XMLHttpRequest();
-					xhr.open("DELETE", "http://localhost:8080/eliminarproveedor?nit_proveedor=" + nit);
+					xhr.open("DELETE", "http://localhost:8080/eliminarproveedor?nitproveedor=" + nit);
 					//Ocultamos el mensaje de error
 					var element = document.getElementById("mensaje-error-eliminado");
 					element.classList.add("visually-hidden");
