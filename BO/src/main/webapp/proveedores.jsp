@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="pagelines-brands.svg">
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width">
-	  <title>E11 - Clientes</title>
+	  <title>E11 - Proveedores</title>
 
 	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	  crossorigin="anonymous">
@@ -76,7 +76,7 @@
             </div>
             <div class="col">
               <h1>
-                Clientes
+                Proveedores
               </h1>
             </div>
             <div class="col">
@@ -92,27 +92,27 @@
               <div class="row d-grid">
                 <!--Boton Lista de usuarios-->
                 <a href="" class=""></a>
-                <button class="btn botonnormal" type="button" onclick="window.location.href='cliente_consultar.jsp'">Consultar</button>
+                <button class="btn botonnormal" type="button" onclick="window.location.href='proveedor_consultar.jsp'">Consultar</button>
               </div>
               <br>
               <div class="row d-grid">
                 <!--Boton Lista de clientes-->
-                <button class="btn botonnormal" type="button" onclick="window.location.href='cliente_crear.jsp'">Crear</button>
+                <button class="btn botonnormal" type="button" onclick="window.location.href='proveedor_crear.jsp'">Crear</button>
               </div>
               <br>
               <div class="row d-grid">
                 <!--Boton Ventas por Cliente-->
-                <button class="btn botonnormal" type="button" onclick="window.location.href='cliente_actualizar.jsp'">Actualizar</button>
+                <button class="btn botonnormal" type="button" onclick="window.location.href='proveedor_actualizar.jsp'">Actualizar</button>
               </div>
               <br>
               <div class="row d-grid">
                 <!--Boton Ventas por Cliente-->
-                <button class="btn botonnormal" type="button" onclick="window.location.href='cliente_borrar.jsp'">Borrar</button>
+                <button class="btn botonnormal" type="button" onclick="window.location.href='proveedor_borrar.jsp'">Borrar</button>
               </div>
               <br>
               <div class="row d-grid">
                 <!--Boton Lista de usuarios-->
-                <button class="btn botonnormal" type="button" onclick="window.location.href='lista_clientes.jsp'">Lista de clientes</button>
+                <button class="btn botonnormal" type="button" onclick="window.location.href='lista_proveedores.jsp'">Lista de Proveedores</button>
               </div>
             </div>
             <div class="col-1"></div> <!--Caja vacia para centrar el titulo-->

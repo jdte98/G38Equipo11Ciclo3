@@ -41,6 +41,7 @@ insert into clientes values (003,'street3','client3@mail.com','cliente 3','70000
 
 select * from clientes;
 
+#--------------------------Crear la tabla para los proveedores--------------
 create table if not exists proveedores(
 	nitproveedor bigint primary key,
     ciudad_proveedor varchar(255),
