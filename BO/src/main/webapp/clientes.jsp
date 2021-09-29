@@ -122,7 +122,7 @@
     </main>
   
   
-  <!--Script para el modo oscuro-->
+
   <script src="script.js"></script>
   </body>
 	

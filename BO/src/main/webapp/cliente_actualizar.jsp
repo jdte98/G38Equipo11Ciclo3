@@ -86,8 +86,8 @@
           <br>
           <div class="row">
             <!--Mensajes de alerta para Actualizar-->
-            <div class="alert errormensaje visually-hidden" role="alert">No fue posible encontrar el cliente</div>
-            <div class="alert mensaje-bien visually-hidden" role="alert">
+            <div id="mensaje-error-coincidencia-cedula" class="alert errormensaje visually-hidden" role="alert">No fue posible encontrar el cliente</div>
+            <div id="mensaje-bien-cliente-actualizado" class="alert mensaje-bien visually-hidden" role="alert">
               <span><i class="fas fa-user-check fa-2x"></i></span>
               El cliente fue actualizado con éxito</div>
           </div>
@@ -95,8 +95,8 @@
           <div class="row">
             <div class="col-3"></div>
             <div class="col">
-              <!--Caja texto cÃ©dula cliente-->
-              <input type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula">
+              <!--Caja texto cedula cliente-->
+              <input id="cedula_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula">
             </div>
             <div class="col-3"></div>
           </div>
@@ -104,14 +104,14 @@
           <div class="row align-middle">
             <div class="col"></div>
             <div class="col-2 d-grid">
-              <button class="btn botonnormal" type="button">
+              <button class="btn botonnormal" type="button" onclick="verificarClientes()">
                 <i class="fas fa-search"></i>
               </button>
             </div>
             <div class="col"></div>
           </div>
           <br>
-          <form class="visually-hidden" action="">
+          <form id="form-actualizar" class="visually-hidden" action="">
             <div class="row align-items-center align-middle">
               <div class="col"></div>
               <div class="col">
@@ -119,11 +119,21 @@
               </div>
               <div class="col"></div>
             </div> 
+            <br>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto con la Cedula del usuario a editar deshabilitada-->
+                <input id="cedula_clientebien" type="text" class="form-control shadow-sm cajatexto" aria-label="readonly input example" readonly>
+              </div>
+              <div class="col-3"></div>
+            </div>
+            <br>
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
                 <!--Caja texto Nombre Completo-->
-                <input type="text" class="form-control shadow-sm cajatexto" placeholder="Nombre completo" required>
+                <input id="nombre_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Nombre completo" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -132,7 +142,7 @@
               <div class="col-3"></div>
               <div class="col">
                 <!--Caja texto Correo Electronico cliente-->
-                <input type="email" class="form-control shadow-sm cajatexto" placeholder="Correo" required>
+                <input id="email_cliente" type="email" class="form-control shadow-sm cajatexto" placeholder="Correo" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -140,8 +150,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto direcciÃ³n cliente-->
-                <input type="text" class="form-control shadow-sm cajatexto" placeholder="Dirección" required>
+                <!--Caja texto dirección cliente-->
+                <input id="direccion_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Dirección" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -149,8 +159,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto telÃ©fono cliente-->
-                <input type="password" class="form-control shadow-sm cajatexto" placeholder="Teléfono" required>
+                <!--Caja texto telefono cliente-->
+                <input id="telefono_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Teléfono" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -158,7 +168,7 @@
             <div class="row align-middle">
               <div class="col"></div>
               <div class="col-2 d-grid">
-                <button class="btn botonnormal" type="button">
+                <button class="btn botonnormal" type="button" onclick="actualizar()">
                   <i class="fas fa-user-edit"></i>
                 </button>
               </div>
@@ -171,7 +181,7 @@
   
   
  
-  <script src="script.js"></script>
+  <script src="script_cliente_actualizar.js"></script>
   </body>
 	
 </html>

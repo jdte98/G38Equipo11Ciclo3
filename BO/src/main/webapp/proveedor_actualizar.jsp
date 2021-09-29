@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="pagelines-brands.svg">
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width">
-	  <title>E11 - Crear cliente</title>
+	  <title>E11 - Actualizar proveedor</title>
 
 	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	  crossorigin="anonymous">
@@ -65,7 +65,7 @@
           </div>
         </div>
       </nav>
-    </header>  
+    </header>
 
     <main>
       <div class="container-fluid cont">
@@ -75,31 +75,65 @@
               <i class="fab fa-pagelines fa-3x"></i>
             </div>
             <div class="col">
-              <h1>Crear Cliente</h1>
+              <h1>Actualizar Proveedor</h1>
             </div>
             <div class="col">
-              <a class="flecha-volver" href="clientes.jsp">
+              <a class="flecha-volver" href="proveedores.jsp">
                 <i class="fas fa-arrow-left fa-2x"></i>
               </a>
             </div>
           </div>
           <br>
           <div class="row">
-            <!--Mensajes de alerta-->
-            <div id="errorcrearcliente" class="alert errormensaje visually-hidden" role="alert">
-              <span><i class="fas fa-user-times fa-2x"></i></span>
-              El cliente no se ha podido crear</div>
-            <div id="correctocrearcliente" class="alert mensaje-bien visually-hidden" role="alert">
+            <!--Mensajes de alerta para Actualizar-->
+            <div id="mensaje-error-coincidencia-NIT" class="alert errormensaje visually-hidden" role="alert">No fue posible encontrar el proveedor</div>
+            <div id="mensaje-bien-proveedor-actualizado" class="alert mensaje-bien visually-hidden" role="alert">
               <span><i class="fas fa-user-check fa-2x"></i></span>
-              El cliente fue creado con exito</div>
+              El Proveedor fue actualizado con éxito</div>
           </div>
           <br>
-          <form action="">
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col">
+              <!--Caja texto nit proveedor-->
+              <input id="nit_proveedor" type="text" class="form-control shadow-sm cajatexto" placeholder="NIT">
+            </div>
+            <div class="col-3"></div>
+          </div>
+          <br>
+          <div class="row align-middle">
+            <div class="col"></div>
+            <div class="col-2 d-grid">
+              <button class="btn botonnormal" type="button" onclick="verificarProveedores()">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div class="col"></div>
+          </div>
+          <br>
+          <form id="form-actualizar" class="visually-hidden" action="">
+            <div class="row align-items-center align-middle">
+              <div class="col"></div>
+              <div class="col">
+                <h4>Datos a actualizar</h4>
+              </div>
+              <div class="col"></div>
+            </div> 
+            <br>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col">
+                <!--Caja texto con el nit del proveedor a editar deshabilitada-->
+                <input id="nit_proveedorbien" type="text" class="form-control shadow-sm cajatexto" aria-label="readonly input example" readonly>
+              </div>
+              <div class="col-3"></div>
+            </div>
+            <br>
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
                 <!--Caja texto Nombre Completo-->
-                <input id="nombre_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Nombre completo" required>
+                <input id="nombre_proveedor" type="text" class="form-control shadow-sm cajatexto" placeholder="Nombre completo" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -107,8 +141,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto CÃ©dula-->
-                <input id="cedula_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula" required>
+                <!--Caja texto Direccion proveedor-->
+                <input id="direccion_proveedor" type="text" class="form-control shadow-sm cajatexto" placeholder="Direccion" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -116,8 +150,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto Correo Electronico-->
-                <input id="email_cliente" type="email" class="form-control shadow-sm cajatexto" placeholder="Correo" required>
+                <!--Caja texto ciudad proveedor-->
+                <input id="ciudad_proveedor" type="text" class="form-control shadow-sm cajatexto" placeholder="Ciudad" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -125,17 +159,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto Dirección-->
-                <input id="direccion_cliente" type="text" class="form-control shadow-sm cajatexto" placeholder="Dirección" required>
-              </div>
-              <div class="col-3"></div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="col-3"></div>
-              <div class="col">
-                <!--Caja texto Telefono-->
-                <input id="telefono_cliente" type="tel" class="form-control shadow-sm cajatexto" placeholder="Teléfono" required>
+                <!--Caja texto telefono proveedor-->
+                <input id="telefono_proveedor" type="text" class="form-control shadow-sm cajatexto" placeholder="Teléfono" required>
               </div>
               <div class="col-3"></div>
             </div>
@@ -143,19 +168,20 @@
             <div class="row align-middle">
               <div class="col"></div>
               <div class="col-2 d-grid">
-                <button class="btn botonnormal" type="button" onclick="crear()">
-                  <i class="fas fa-user-plus"></i>
+                <button class="btn botonnormal" type="button" onclick="actualizar()">
+                  <i class="fas fa-user-edit"></i>
                 </button>
               </div>
               <div class="col"></div>
-            </div>
-          </form>  
+            </div> 
+          </form>
         </div>
       </div>
     </main>
   
-
-  <script src="script_cliente_crear.js"></script>
+  
+ 
+  <script src="script_proveedor_actualizar.js"></script>
   </body>
 	
 </html>

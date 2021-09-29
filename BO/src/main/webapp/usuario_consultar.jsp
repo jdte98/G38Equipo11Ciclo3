@@ -157,7 +157,7 @@
               <div class="col-3"></div>
               <div class="col">
                 <!--Caja texto Contraseña deshabilitada-->
-                <input id="passwordinfo" type="" class="form-control shadow-sm cajatexto" readonly>
+                <input id="passwordinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
               </div>
               <div class="col-3"></div>
             </div> 
