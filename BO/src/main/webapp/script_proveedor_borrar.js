@@ -29,7 +29,7 @@ function borrar() {
 				//Luego de confirmar que existe el proveedor verificamos si esta seguro de eliminar, si es verdadero elimina, si no, no
 				if (confirmacion == true){
 					//guardamos la el valor del NIT en la variable
-					var nit = document.getElementById("nitproveedor").value;
+					var nit = document.getElementById("nit_proveedor").value;
 					//Eliminamos el proveedor
 					var xhr = new XMLHttpRequest();
 					xhr.open("DELETE", "http://localhost:8080/eliminarproveedor?nit_proveedor=" + nit);
