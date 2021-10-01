@@ -17,7 +17,7 @@ public class ProveedorDAO {
 			
 			try {
 				Statement estatuto = conex.getConnection().createStatement();
-				String sentencia = "INSERT INTO proveedor VALUES(" 
+				String sentencia = "INSERT INTO proveedores VALUES(" 
 						+ Proveedor.getNit_proveedor()+ "," + "'"
 						+ Proveedor.getCiudad_proveedor() + "'," + "'" 
 						+ Proveedor.getDireccion_proveedor() + "'," + "'" 
