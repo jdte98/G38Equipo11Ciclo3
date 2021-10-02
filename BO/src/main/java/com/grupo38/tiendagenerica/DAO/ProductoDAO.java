@@ -21,7 +21,7 @@ public class ProductoDAO {
 			String sentencia = "INSERT INTO productos VALUES(" 
 					+ product.getCodigo_producto() + "," 
 					+ product.getIva_compra() + ","
-					+ product.getNit_proveedor() + ",'" 
+					+ product.getNitproveedor() + ",'" 
 					+ product.getNombre_producto()+ "'," 
 					+ product.getPrecio_compra() + "," 
 					+ product.getPrecio_venta() + "" 
@@ -60,7 +60,7 @@ public class ProductoDAO {
 				ProductoVO newproducto = new ProductoVO();
 				newproducto.setCodigo_producto(Integer.parseInt(res.getString("codigo_producto")));
 				newproducto.setIva_compra(Double.parseDouble(res.getString("iva_compra")));
-				newproducto.setNit_proveedor(Integer.parseInt(res.getString("nit_proveedor")));
+				newproducto.setNitproveedor(Integer.parseInt(res.getString("nit_proveedor")));
 				newproducto.setNombre_producto(res.getString("nombre_producto"));
 				newproducto.setPrecio_compra(Double.parseDouble(res.getString("precio_compra")));
 				newproducto.setPrecio_venta(Double.parseDouble(res.getString("precio_venta")));
@@ -103,7 +103,7 @@ public class ProductoDAO {
 				ProductoVO newproducto = new ProductoVO();
 				newproducto.setCodigo_producto(Integer.parseInt(res.getString("codigo_producto")));
 				newproducto.setIva_compra(Double.parseDouble(res.getString("iva_compra")));
-				newproducto.setNit_proveedor(Integer.parseInt(res.getString("nit_proveedor")));
+				newproducto.setNitproveedor(Integer.parseInt(res.getString("nit_proveedor")));
 				newproducto.setNombre_producto(res.getString("nombre_producto"));
 				newproducto.setPrecio_compra(Double.parseDouble(res.getString("precio_compra")));
 				newproducto.setPrecio_venta(Double.parseDouble(res.getString("precio_venta")));
@@ -171,7 +171,7 @@ public class ProductoDAO {
 			String sentencia = "UPDATE productos "
 					+ "SET iva_compra = "+product.getIva_compra()+","
 					+ "nombre_producto = '"+product.getNombre_producto()+"',"
-					+ "nit_proveedor = "+product.getNit_proveedor()+","
+					+ "nit_proveedor = "+product.getNitproveedor()+","
 					+ "precio_compra = "+product.getPrecio_compra()+","
 					+ "precio_venta = "+product.getPrecio_venta()+""
 					+ "WHERE codigo_producto = "+product.getCodigo_producto()+";";
