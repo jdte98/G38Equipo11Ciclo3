@@ -39,20 +39,31 @@ insert into clientes values (001,'street1','client1@mail.com','cliente 1','70000
 insert into clientes values (002,'street2','client2@mail.com','cliente 2','7000002');
 insert into clientes values (003,'street3','client3@mail.com','cliente 3','7000003');
 
-select * from clientes;
 
-#--------------------------Crear la tabla para los proveedores--------------
-create table if not exists proveedores(
-	nitproveedor bigint primary key,
-    ciudad_proveedor varchar(255),
-    direccion_proveedor varchar(255),
-    nombre_proveedor varchar(255) NOT NULL,
-    telefono_proveedor varchar(255) NOT NULL
+select * from clientes;
+CREATE TABLE proveedores ( 
+nitproveedor BIGINT PRIMARY KEY,
+ciudad_proveedor VARCHAR (255) NOT NULL,
+direccion_proveedor VARCHAR (255) NOT NULL,
+nombre_proveedor VARCHAR (255) NOT NULL,
+telefono_proveedor VARCHAR (255) NOT NULL
+);
+INSERT INTO proveedorers VALUES (001, 'bogota','las brisas','postobon','3114155447');
+INSERT INTO proveedorers VALUES (002, 'bogota','las brisas','postobon','3114155447');
+INSERT INTO proveedorers VALUES (003, 'bogota','las brisas','postobon','3114155447');
+INSERT INTO proveedorers VALUES (004, 'bogota','las brisas','postobon','3114155447');
+INSERT INTO proveedorers VALUES (005, 'bogota','las brisas','postobon','3114155447'); 
+
+CREATE TABLE productos(
+codigo_producto BIGINT PRIMARY KEY,
+iva_compra DOUBLE NOT NULL,
+nitproveedor BIGINT NOT NULL,
+nombre_producto VARCHAR(255) NOT NULL,
+precio_compra DOUBLE NOT NULL,
+precio_venta DOUBLE NOT NULL,
+foreign key (nitproveedor) REFERENCES proveedores(nitproveedor)
 );
 
-insert into proveedores values (001,'ciudad1','calle1','prov 1','7000001');
-insert into proveedores values (002,'ciudad2','calle2','prov 2','7000002');
-insert into proveedores values (003,'ciudad3','calle3','prov 3','7000003');
-insert into proveedores values (004,'ciudad4','calle4','prov 4','7000004');
+INSERT INTO productos VALUES(201,0.19,1,'leche entera', 2000.0,3000.0);
 
-select * from proveedores;
+
