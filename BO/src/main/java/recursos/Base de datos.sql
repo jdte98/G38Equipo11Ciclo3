@@ -1,9 +1,7 @@
-#Comando para crear la base de datos
-create database tienda;
-#Comando que siempre se debe ejecutar antes de trabajar en las tablas de la base de datos 
-use tienda;
+#Siempre correr la siguiente linea para usar la base de datos correcta!
+use g38e11;
 
-#-----------------------------------------Crear la tabla de usuarios---------------------------
+#-----------------------------------------Tabla de Usuarios---------------------------
 #Comando para crear la tabla 
 create table usuarios(
 	cedula_usuario bigint primary key,
@@ -12,7 +10,8 @@ create table usuarios(
     password varchar(255) not null,
     usuario varchar(255) not null
 );
- #Comandos para que el correo y el usuario nunca se repitan
+
+#Comandos para que el correo y el usuario nunca se repitan
 create unique index email_usuario on usuarios(cedula_usuario);
 create unique index usuario on usuarios(cedula_usuario);
 
@@ -26,12 +25,9 @@ insert into usuarios values (005,'name5@gmail.com','Name 5','pass5','user5');
 
 #Comando para ver la tabla con los datos
 select * from usuarios;
-drop table usuarios;
 
 #----------------------------------Tabla de clientes------------------------------
-DROP TABLE IF EXISTS CLIENTES;
-
-create table if not exists clientes(
+create table clientes(
 	cedula_cliente bigint primary key,
     direccion_cliente varchar(255),
     email_cliente varchar(255) UNIQUE NOT NULL,
@@ -55,8 +51,6 @@ direccion_proveedor VARCHAR (255) NOT NULL,
 nombre_proveedor VARCHAR (255) NOT NULL,
 telefono_proveedor VARCHAR (255) NOT NULL
 );
-
-drop table proveedores;
 
 INSERT INTO proveedores VALUES (001, 'ciudad 1','Calle 1','Proveedor 1','3000000001');
 INSERT INTO proveedores VALUES (002, 'ciudad 2','Calle 2','Proveedor 2','3000000002'); 
