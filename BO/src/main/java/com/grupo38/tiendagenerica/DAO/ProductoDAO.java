@@ -47,7 +47,6 @@ public class ProductoDAO {
 
 	}
 
-
 	public ArrayList<ProductoVO> consultarProducto(Integer product) {	
 		ArrayList<ProductoVO> listaproductos = new ArrayList<ProductoVO>();		
 		Conexion conex = new Conexion();
@@ -85,7 +84,6 @@ public class ProductoDAO {
 		}
 		return listaproductos;
 	}
-
 
 	public ArrayList<ProductoVO> listaDeProductos() {
 		ArrayList<ProductoVO> listaproductos = new ArrayList<ProductoVO>();
@@ -171,7 +169,7 @@ public class ProductoDAO {
 			String sentencia = "UPDATE productos "
 					+ "SET iva_compra = "+product.getIva_compra()+","
 					+ "nombre_producto = '"+product.getNombre_producto()+"',"
-					+ "nit_proveedor = "+product.getNitproveedor()+","
+					+ "nitproveedor = "+product.getNitproveedor()+","
 					+ "precio_compra = "+product.getPrecio_compra()+","
 					+ "precio_venta = "+product.getPrecio_venta()+""
 					+ "WHERE codigo_producto = "+product.getCodigo_producto()+";";
@@ -185,7 +183,7 @@ public class ProductoDAO {
 
 		} catch (SQLException e) {
 			System.out.println("------------------- ERROR --------------");
-			System.out.println("No se pudo actualizar  el producto");
+			System.out.println("No se pudo actualizar el producto");
 			System.out.println(e.getMessage());
 			System.out.println(e.getErrorCode());
 		} catch (Exception e) {
@@ -196,8 +194,7 @@ public class ProductoDAO {
 		}
 
 	}
-	
-	
+		
 	public void eliminarTodoProducto() {
 		
 		Conexion conex = new Conexion();

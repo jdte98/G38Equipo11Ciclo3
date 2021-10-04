@@ -107,6 +107,31 @@
   background-color: var(--color-fondo);
 }
 
+/*--------- Estilo para el scroll ------------*/
+/*Tamaño del scroll*/
+.fondo::-webkit-scrollbar{
+  width: 10px;
+}
+/*Estilo de la barra scroll*/
+.fondo::-webkit-scrollbar-thumb{
+  background: var(--color-oscuro3);
+  border-radius: 5px;
+}
+/*Estilo para cuando se le da click a la barra scroll*/
+.fondo::-webkit-scrollbar-thumb:active{
+  background-color: var(--color-oscuro4);
+}
+
+.fondo::-webkit-scrollbar-thumb:hover{
+  background: var(--color-medio);
+  box-shadow: 0 0 2px 1px var(--color-oscuro);
+}
+
+.fondo::-webkit-scrollbar-track {
+  background: var(--color-caja);
+  border-radius: 5px;
+}
+
 /*------------Estilo para el contenedor--------------*/
 .estilocontainer{
   background-color: var(--color-caja);
@@ -276,6 +301,24 @@
     opacity: 0.5;
 }
 
+/* Estilo contenedor grande*/
 .cont{
   padding: 120px 1px 0;
+}
+
+/* Estilo para el input de subir archivos */
+
+.file{
+  background-color: var(--color-botonnormal);
+  color: var(--color-texto);
+  border: none;
+}
+
+.file:focus{
+  background-color: var(--color-botonnormal);
+  color: var(--color-texto);
+}
+
+.file:hover{
+  background-color: var(--color-botonnormalhover);
 }
