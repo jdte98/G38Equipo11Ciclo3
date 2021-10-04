@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="pagelines-brands.svg">
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width">
-	  <title>E11 - Clientes</title>
+	  <title>E11 - Borrar proveedor</title>
 
 	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	  crossorigin="anonymous">
@@ -65,65 +65,56 @@
           </div>
         </div>
       </nav>
-    </header>
+    </header> 
 
     <main>
       <div class="container-fluid cont">
         <div class="container estilocontainer" align="center">
-          <div class="row align-items-center">
+          <div class="row align-items-center align-middle">
             <div class="col">
               <i class="fab fa-pagelines fa-3x"></i>
             </div>
             <div class="col">
-              <h1>
-                Clientes
-              </h1>
+              <h1>Borrar Proveedor</h1>
             </div>
             <div class="col">
-              <a class="flecha-volver" href="pagina_inicio.jsp">
+              <a class="flecha-volver" href="proveedores.jsp">
                 <i class="fas fa-arrow-left fa-2x"></i>
               </a>
             </div>
           </div>
           <br>
-          <div class="row justify-content-center">
-            <div class="col-1"></div> <!--Caja vacia para centrar el titulo-->
-            <div class="col-4 align-self-center">
-              <div class="row d-grid">
-                <!--Boton Lista de usuarios-->
-                <a href="" class=""></a>
-                <button class="btn botonnormal" type="button" onclick="window.location.href='cliente_consultar.jsp'">Consultar</button>
-              </div>
-              <br>
-              <div class="row d-grid">
-                <!--Boton Lista de clientes-->
-                <button class="btn botonnormal" type="button" onclick="window.location.href='cliente_crear.jsp'">Crear</button>
-              </div>
-              <br>
-              <div class="row d-grid">
-                <!--Boton Ventas por Cliente-->
-                <button class="btn botonnormal" type="button" onclick="window.location.href='cliente_actualizar.jsp'">Actualizar</button>
-              </div>
-              <br>
-              <div class="row d-grid">
-                <!--Boton Ventas por Cliente-->
-                <button class="btn botonnormal" type="button" onclick="window.location.href='cliente_borrar.jsp'">Borrar</button>
-              </div>
-              <br>
-              <div class="row d-grid">
-                <!--Boton Lista de usuarios-->
-                <button class="btn botonnormal" type="button" onclick="window.location.href='lista_clientes.jsp'">Lista de clientes</button>
-              </div>
-            </div>
-            <div class="col-1"></div> <!--Caja vacia para centrar el titulo-->
+          <div class="row">
+            <!--Mensajes de alerta para consultar-->
+            <div id="mensaje-error-eliminado" class="alert errormensaje visually-hidden" role="alert">El proveedor no fue eliminado</div>
+            <div id="mensaje-proveedor-no-encontrado" class="alert errormensaje visually-hidden" role="alert">Verifique que el NIT sea la correcta</div>
+            <div id="mensaje-bien-eliminado" class="alert mensaje-bien visually-hidden" role="alert">El proveedor fue eliminado con éxito</div>
           </div>
-        </div>
+          <br>
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col">
+              <!--Caja texto proveedor-->
+              <input id="nit_proveedor" type="text" class="form-control shadow-sm cajatexto" placeholder="NIT">
+            </div>
+            <div class="col-3"></div>
+          </div>
+          <br>
+          <div class="row align-middle">
+            <div class="col"></div>
+            <div class="col-2 d-grid">
+              <button class="btn botonnormal" type="button"onclick="borrar()">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
+            <div class="col"></div>
+          </div>   
+      </div>
       </div>
     </main>
   
-  
 
-  <script src="script.js"></script>
+  <script src="script_proveedor_borrar.js"></script>
   </body>
 	
 </html>
