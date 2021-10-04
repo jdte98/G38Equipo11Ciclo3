@@ -6,7 +6,11 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import com.grupo38.tiendagenerica.DAO.ProductoDAO;
+import com.grupo38.tiendagenerica.DTO.ProductoVO;
+@RestController
 public class ProductoController {
 
 	 // @GetMapping obtener o buscar
@@ -17,7 +21,7 @@ public class ProductoController {
 	@PostMapping("/registrarproducto")
 	public void registrarProducto(ProductoVO producto) {
 		ProductoDAO Dao = new ProductoDAO();
-		Dao.resgistrarProducto(producto);
+		Dao.registrarProducto(producto);
 	}
 	
 	@GetMapping("/consultarproducto")

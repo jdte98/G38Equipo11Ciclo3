@@ -60,7 +60,7 @@ public class ProductoDAO {
 				ProductoVO newproducto = new ProductoVO();
 				newproducto.setCodigo_producto(Integer.parseInt(res.getString("codigo_producto")));
 				newproducto.setIva_compra(Double.parseDouble(res.getString("iva_compra")));
-				newproducto.setNitproveedor(Integer.parseInt(res.getString("nit_proveedor")));
+				newproducto.setNitproveedor(Integer.parseInt(res.getString("nitproveedor")));
 				newproducto.setNombre_producto(res.getString("nombre_producto"));
 				newproducto.setPrecio_compra(Double.parseDouble(res.getString("precio_compra")));
 				newproducto.setPrecio_venta(Double.parseDouble(res.getString("precio_venta")));
@@ -103,7 +103,7 @@ public class ProductoDAO {
 				ProductoVO newproducto = new ProductoVO();
 				newproducto.setCodigo_producto(Integer.parseInt(res.getString("codigo_producto")));
 				newproducto.setIva_compra(Double.parseDouble(res.getString("iva_compra")));
-				newproducto.setNitproveedor(Integer.parseInt(res.getString("nit_proveedor")));
+				newproducto.setNitproveedor(Integer.parseInt(res.getString("nitproveedor")));
 				newproducto.setNombre_producto(res.getString("nombre_producto"));
 				newproducto.setPrecio_compra(Double.parseDouble(res.getString("precio_compra")));
 				newproducto.setPrecio_venta(Double.parseDouble(res.getString("precio_venta")));
