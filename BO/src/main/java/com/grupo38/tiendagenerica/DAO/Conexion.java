@@ -8,7 +8,7 @@ public class Conexion {
 	static String nombre_base_datos = "g38e11";
 	static String usuariodb = "admin";
 	static String clavebd = "minticroca";
-	static String url ="jdbc:mysql://tiendasgenericasdr-g9-g38-53.czo3ixoe3xoe.us-east-1.rds.amazonaws.com" + nombre_base_datos;
+	static String url ="jdbc:mysql://tiendasgenericasdr-g9-g38-53.czo3ixoe3xoe.us-east-1.rds.amazonaws.com/" + nombre_base_datos;
 	
 	//Objeto sin inicializar de la conexion
 	Connection connection = null;
@@ -17,7 +17,7 @@ public class Conexion {
 	public Conexion() {
 		try {
 			//Obtenemos el driver de para mysql
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("org.mariadb.jdbc.Driver");
 			//obtenemos la conexión
 			connection = DriverManager.getConnection(url, usuariodb, clavebd);
 			//Si hay conexión correcta mostrar la información en consola
