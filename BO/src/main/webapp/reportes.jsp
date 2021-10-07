@@ -101,6 +101,11 @@
               </div>
               <br>
               <div class="row d-grid">
+                <!--Boton Lista de proveedores-->
+                <button class="btn botonnormal" type="button" onclick="window.location.href='lista_proveedores.jsp'">Lista de proveedores</button>
+              </div>
+              <br>
+              <div class="row d-grid">
                 <!--Boton Ventas por Cliente-->
                 <button class="btn botonnormal" type="button" onclick="window.location.href=''">Ventas por cliente</button>
               </div>

@@ -86,14 +86,14 @@
           <br>
           <div class="row">
             <!--Mensajes de alerta para consultar-->
-            <div id="mensaje-error-consultar-usuario" class="alert errormensaje visually-hidden" role="alert">No fue posible encontrar el proveedor</div>
+            <div id="mensaje-error-consultar-proveedor" class="alert errormensaje visually-hidden" role="alert">No fue posible encontrar el proveedor</div>
           </div>
           <br>
           <div class="row">
             <div class="col-3"></div>
             <div class="col">
-              <!--Caja texto usuario-->
-              <input id="cedula_usuario" type="text" class="form-control shadow-sm cajatexto" placeholder="Cédula">
+              <!--Caja texto Nit proveedor-->
+              <input id="nitproveedor" type="text" class="form-control shadow-sm cajatexto" placeholder="NIT">
             </div>
             <div class="col-3"></div>
           </div>
@@ -108,7 +108,7 @@
             <div class="col"></div>
           </div>
           <br>
-          <!-- Datos del usuario acultos hasta que coincida la cedula y la existencia -->
+          <!-- Datos del proveedor acultos hasta que coincida el NIT y su existencia -->
           <form id="form-info" class="visually-hidden" action="">
             <div class="row align-items-center align-middle">
               <div class="col"></div>
@@ -120,8 +120,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto con la Cedula del usuario deshabilitada-->
-                <input id="cedula_usuarioinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
+                <!--Caja texto con el nit del proveedor deshabilitada-->
+                <input id="nit_proveedorinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
               </div>
               <div class="col-3"></div>
             </div> 
@@ -129,8 +129,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto Nombre Completo deshabilitada-->
-                <input id="nombre_usuarioinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
+                <!--Caja texto Nombre proveedor deshabilitada-->
+                <input id="nombre_proveedorinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
               </div>
               <div class="col-3"></div>
             </div>
@@ -138,8 +138,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto Correo Electronico deshabilitada-->
-                <input id="email_usuarioinfo" type="email" class="form-control shadow-sm cajatexto" readonly>
+                <!--Caja texto Ciudad proveedor deshabilitada-->
+                <input id="ciudad_proveedorinfo" type="email" class="form-control shadow-sm cajatexto" readonly>
               </div>
               <div class="col-3"></div>
             </div>
@@ -147,8 +147,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto Usuario deshabilitada-->
-                <input id="userinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
+                <!--Caja texto telefono deshabilitada-->
+                <input id="telefono_proveedorinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
               </div>
               <div class="col-3"></div>
             </div>
@@ -156,8 +156,8 @@
             <div class="row">
               <div class="col-3"></div>
               <div class="col">
-                <!--Caja texto Contraseña deshabilitada-->
-                <input id="passwordinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
+                <!--Caja texto dirección deshabilitada-->
+                <input id="direccion_proveedorinfo" type="text" class="form-control shadow-sm cajatexto" readonly>
               </div>
               <div class="col-3"></div>
             </div> 
@@ -166,7 +166,7 @@
       </div>
     </main>
 
-    <script src="script_usuario_consultar.js"></script>
+    <script src="script_proveedor_consultar.js"></script>
   </body>
 	
 </html>
