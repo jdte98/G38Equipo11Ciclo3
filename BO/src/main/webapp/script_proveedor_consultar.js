@@ -2,7 +2,7 @@
 function consultar() {
 	var req = new XMLHttpRequest();
 	var nit = document.getElementById("nitproveedor").value;
-	req.open('GET', 'http://localhost:8080/consultarproveedor?nitproveedor='+ nit, false);
+	req.open('GET', 'http://localhost:8080/consultarproveedores?nitproveedor='+ nit, false);
 	req.send(null);
 	var proveedor = null;
 	if (req.status == 200) {
@@ -14,7 +14,7 @@ function consultar() {
 	
 	if (proveedor.toString() != "") {
 		//Se agrega la información en cada una de las cajas de texto
-		document.getElementById("nitproveedorinfo").value = proveedor[0].nitproveedor;
+		document.getElementById("nit_proveedorinfo").value = proveedor[0].nit_proveedor;
 		document.getElementById("ciudad_proveedorinfo").value = proveedor[0].ciudad_proveedor;
 		document.getElementById("direccion_proveedorinfo").value = proveedor[0].direccion_proveedor;
 		document.getElementById("nombre_proveedorinfo").value = proveedor[0].nombre_proveedor;
@@ -38,7 +38,7 @@ function consultar() {
 		var element2 = document.getElementById("form-info");
 		element2.classList.add("visually-hidden");
 		//Vaciamos todas las cajas donde se muestra la información del proveedor
-		document.getElementById("nitproveedorinfo").value = "";
+		document.getElementById("nit_proveedorinfo").value = "";
 		document.getElementById("ciudad_proveedorinfo").value = "";
 		document.getElementById("direccion_proveedorinfo").value = "";
 		document.getElementById("nombre_proveedorinfo").value = "";
