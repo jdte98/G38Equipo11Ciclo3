@@ -92,7 +92,7 @@
               </div>
               <div id="mensaje-bien-archivo" class="alert mensaje-bien visually-hidden" role="alert">
                 <span><i class="fas fa-check fa-2x"></i></span>
-                El archivo ha sido cargado con éxito
+                El archivo ha sido cargado con Ã©xito
               </div>
             </div>
             <br />
@@ -121,13 +121,6 @@
                 <button id="verTabla" class="btn botonnormal visually-hidden" type="button" onclick="verTabla()">
                   Ver Tabla
                 </button>
-              </div>
-              <div class="col"></div>
-            </div>
-            <br>
-            <div class="row align-middle">
-              <div class="col"></div>
-              <div class="col-2 d-grid">
                 <button id="ocultarTabla" class="btn botonnormal visually-hidden" type="button" onclick="ocultarTabla()">
                   Ocultar Tabla
                 </button>
