@@ -113,7 +113,7 @@
                         <div class="col">
                             <!--Caja texto cedula del cliente-->
                             <input id="cedula_cliente" type="text" class="form-control shadow-sm cajatexto"
-                                placeholder="CÃ©dula Cliente" required />
+                                placeholder="Cédula Cliente" required />
                         </div>
                         <div class="col-2 d-grid">
                             <!--Boton consultar-->
