@@ -57,7 +57,7 @@
                     </ul>
                     <div class="d-flex">
                         <button class="btn bt-inicio-sesion" onclick="window.location.href='index.html'">
-                            Cerrar sesiÃ³n
+                            Cerrar sesión
                         </button>
                     </div>
                 </div>
@@ -90,14 +90,14 @@
                     </div>
                     <div id="correctocrearusuario" class="alert mensaje-bien visually-hidden" role="alert">
                         <span><i class="fas fa-user-check fa-2x"></i></span>
-                        El usuario fue creado con Ã©xito
+                        El usuario fue creado con éxito
                     </div>
                 </div>
                 <br />
                 <form action="">
                     <div class="row align-items-center">
                         <div class="col">
-                            <h5>CÃ©dula cliente</h5>
+                            <h5>Cédula cliente</h5>
                         </div>
                         <div class="col-2 d-grid">
 
@@ -136,7 +136,7 @@
                     <br>
                     <div class="row align-items-center">
                         <div class="col">
-                            <h5>Cod. Prodcuto</h5>
+                            <h5>Cod. Producto</h5>
                         </div>
                         <div class="col-1 d-grid">
                             <h5></h5>
