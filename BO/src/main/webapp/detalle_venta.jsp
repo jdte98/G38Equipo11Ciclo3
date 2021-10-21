@@ -7,7 +7,7 @@
 <link rel="shortcut icon" href="pagelines-brands.svg">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>E11 - Proveedores</title>
+<title>E11 - Detalle Venta</title>
 
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -81,7 +81,7 @@
 						<i class="fab fa-pagelines fa-3x"></i>
 					</div>
 					<div class="col">
-						<h1>Detalle Ventas</h1>
+						<h1>Proveedores</h1>
 					</div>
 					<div class="col">
 						<a class="flecha-volver" href="pagina_inicio.jsp"> <i
