@@ -28,7 +28,7 @@ import com.grupo38.tiendagenerica.DTO.VentaVO ;
 		Dao.registrarVenta (venta);
 	}
 
-	@GetMapping ( " / listarventas " )
+	@GetMapping ( "/listarventas" )
 	public  ArrayList < VentaVO >  listaDeVentas () {
 		VentaDAO  Dao  =  new  VentaDAO ();
 		return  Dao . listaDeVentas ();
